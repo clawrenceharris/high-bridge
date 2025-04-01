@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Tilt+Warp&family=Vast+Shadow&display=swap');
+@font-face {
+  font-family: 'White On Black';
+  src: url('assets/fonts/WhiteOnBlack.woff') format('woff'),
+   url('assets/fonts/WhiteOnBlack.woff2') format('woff2');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tree D Wannabe';
+  src: url('assets/fonts/tree_d_wannabe.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 13px;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  
+}
+:root {
+  --secondary-color:#40f1fe ;
+  --primary-color: #f34a4a;
+  --accent-color: #ffdb29;
+  --border: 2px lightgray solid;
+}
+
+
+body {
+  color: white;
+  background-color: var(--primary-color);
+  font-family: sans-serif;
+  max-width: 2000px;
+  height: 200vh;
+  margin: auto;
+}
+header img{
+
+  position: absolute;
+  top: 100px;
+
+  max-height: calc(100vh - 100px);
+  left:0;
+  height: auto;
+
+
+}
+
+header{
+  background-image: url(assets/images/golden-gate-bridge.png);
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position-y: 100px;
+
+}
+header h1{
+  text-align: right;
+  color:white;
+
+  font-size: clamp(5rem, 25vw, 15rem);
+  padding: 10px 30px;
+
+}
+
+
+header span{
+  background-color: black;
+
+}
+header .word1 {
+  display: inline-block;
+  animation: jitter 3.5s infinite;
+  animation-timing-function: step-start;
+  animation-direction: reverse;
+
+  transform-origin: center;
+}
+
+header .word2 {
+  display: inline-block;
+  animation: jitter 3.5s  infinite;
+  transform-origin: center;
+  animation-timing-function: step-start;
+  animation-direction: alternate-reverse;
+
+}
+
+#background{
+  position: fixed;
+}
+
+
+@keyframes jitter {
+  0% { transform: rotate(6deg); }
+  25% { transform: rotate(-7.8deg); }
+  50% { transform: rotate(5deg); }
+  75% { transform: rotate(-3.3deg); }
+  100% { transform: rotate(7deg); }
+}
+
+
+
+h1{
+  color:black;
+  font-weight: 900;
+  font-family:"White On Black";
+
+}
+
+nav{
+  font-weight: 700;
+  height: 130px;
+  font-size: 2rem;
+  font-family: "Tilt Warp";
+  position: sticky;
+  top: 0;
+  background-color: black;
+
+  z-index: 5; /* Set the nav z-index to a lower value, like 5 */
+  
+}
+
+nav ul{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: repeat(1, 1fr); 
+  height: 100%;
+  justify-content: space-between;
+  list-style: none;
+  background-color: black;
+
+
+}
+nav li{
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+#car {
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+}
+
+nav a{
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  transition: 0.1s ease;
+}
+nav a:hover{
+  background-color: var(--primary-color);
+  color: white;
+}
+nav .active
+{
+
+ 
+  font-weight: 700;
+  top:0;
+  font-size: clamp(2ch, 10vw, 4ch);
+  color: var(--primary-color)
+}
+
+a{
+  
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (min-width: 720px) {
+ 
+}
