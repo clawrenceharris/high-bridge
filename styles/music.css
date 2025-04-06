@@ -1,0 +1,38 @@
+#music header .overlay {
+  background-color: var(--secondary-color);
+  opacity: 0.4;
+}
+
+.albums {
+  margin-top: 20px;
+  overflow-x: auto;
+  width: 100%;
+  gap: 30px;
+  display: flex;
+}
+.albums div {
+  background-color: black;
+  box-shadow: 0 10px 25px rgb(0, 0, 0);
+
+  padding: 10px;
+}
+.albums img {
+  box-shadow: 0 10px 25px rgb(0, 0, 0);
+
+  object-fit: cover;
+  height: 150px;
+  width: 150px;
+}
+.albums p {
+  margin: 20px 0;
+}
+
+.albums div {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+#music main h2 {
+  background-color: var(--secondary-color);
+}

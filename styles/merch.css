@@ -1,0 +1,7 @@
+#merch header .overlay {
+  background-color: var(--accent-color);
+}
+
+#merch main h2 {
+  background-color: var(--accent-color);
+}
