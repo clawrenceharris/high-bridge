@@ -13,17 +13,17 @@ html {
   overscroll-behavior: none;
 }
 :root {
-  --secondary-color: #40f1fe;
+  --primary-color: rgb(0, 149, 255);
   --tertiary-color: #78ff60;
 
-  --primary-color: #f34a4a;
+  --secondary-color: #f83e3e;
   --accent-color: #ffdb29;
   --border: 2px lightgray solid;
   --header-bg-color: white;
 }
 
 body {
-  color: white;
+  color: black;
   max-width: 1200px;
   margin: auto;
   position: relative;
@@ -46,19 +46,36 @@ body #background {
   position: fixed;
   z-index: -1;
 }
+
 header {
+  color: white;
+  max-height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
-  background-color: black;
-  color: white;
-  height: 100svh;
-  position: relative;
   overflow: hidden;
   background-color: rgb(238, 241, 255);
 }
 
-header .overlay {
+header .header-top a {
+  font-size: 2rem;
+  color: white;
+  font-family: "blockhead-plain";
+}
+
+header .header-top {
+  position: fixed;
+  z-index: 999;
   top: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: black;
+}
+header .overlay {
+  top: 100px;
   opacity: 0.5;
 
   position: absolute;
@@ -67,38 +84,13 @@ header .overlay {
 }
 
 header h1 {
-  left: 0;
   line-height: 120%;
-  z-index: 9;
+  z-index: 99;
   padding: 20px;
 }
 
-main {
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  min-height: 100svh;
-}
-a {
-  cursor: pointer;
-  font-weight: 600;
-  text-decoration: none;
-  color: black;
-  font-family: "Roboto";
-  letter-spacing: 2px;
-
-  transition: 0.1s ease;
-}
-p a:hover {
-  border-bottom: 2px solid black;
-}
-section {
-  margin-top: 45px;
-  display: flex;
-  padding: 20px 30px;
-  flex-direction: column;
-  place-items: center;
+.link:hover {
+  border-bottom-width: 2px;
 }
 
 .grid-items {
@@ -108,12 +100,25 @@ section {
   grid-template-columns: repeat(2, 1fr);
 }
 
-h2 {
+button {
+  background: none;
+  border: 3px solid black;
   color: black;
-  display: inline-block;
-  padding: 10px 20px;
+  font-family: "Tilt Warp";
 
-  font-size: clamp(3rem, 4vw, 4rem);
+  padding: 15px;
+  width: 200px;
+  /* font-family: "Roboto"; */
+  letter-spacing: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: black;
+  color: white;
+}
+h2 {
+  font-size: clamp(3rem, 9vw, 4rem);
   margin: 30px 0;
   font-family: "Special Elite";
 }
@@ -123,47 +128,53 @@ h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: clamp(5rem, 20vw, 10rem);
 }
+
+h3 {
+  letter-spacing: 3px;
+  font-size: 2.5rem;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
 p {
   margin: 10px 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   letter-spacing: 2px;
+  line-height: 200%;
   font-family: "Roboto", sans-serif;
 }
+
+a {
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-family: "Roboto";
+  letter-spacing: 2px;
+}
+.link {
+  color: black;
+  font-family: "Roboto";
+  border: 0 solid black;
+  transition: 0.1s ease;
+}
+
 nav {
   font-size: clamp(1rem, 4vw, 2rem);
   font-family: "Tilt Warp";
   position: sticky;
   margin-top: 60px;
   top: 0;
-
-  height: 100px;
+  padding: 10px;
+  height: 80px;
   z-index: 99;
   background-color: black;
 }
 
-header .header-top a {
-  font-size: 2rem;
-  background: none;
-  display: inline;
-  color: white;
-  font-family: "blockhead-plain";
-  cursor: pointer;
-}
-
-header .header-top {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background-color: black;
-}
 nav ul {
   display: flex;
+  gap: 10px;
 
   height: 100%;
   list-style: none;
@@ -180,23 +191,49 @@ nav a {
   font-family: "Tilt Warp";
   width: 100%;
   display: flex;
+  background-color: black;
   letter-spacing: 4px;
   align-items: center;
   justify-content: center;
   color: white;
-  transition: 0.1s ease;
+  transition: 0.2s ease;
 }
-nav a:hover {
+
+nav a:not(.active):hover {
+  margin-bottom: 3px;
+}
+nav li {
   background-color: white;
-  color: black;
 }
-nav .active {
-  font-weight: 700;
-  top: 0;
-  color: var(--primary-color);
+
+nav a.active {
+  margin-bottom: 3px;
 }
-nav .active:hover {
-  color: var(--primary-color);
+footer svg {
+  color: white;
+}
+footer svg:hover {
+  opacity: 0.6;
+}
+footer .link {
+  color: white;
+  border-bottom-color: white;
+}
+footer {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+}
+
+#socials {
+  gap: 20px;
+  display: flex;
 }
 
 @media only screen and (min-width: 720px) {

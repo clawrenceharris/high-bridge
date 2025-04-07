@@ -1,38 +1,169 @@
-#music header .overlay {
-  background-color: var(--secondary-color);
-  opacity: 0.4;
-}
-
-.albums {
-  margin-top: 20px;
-  overflow-x: auto;
+.albums-container {
   width: 100%;
-  gap: 30px;
   display: flex;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
-.albums div {
-  background-color: black;
-  box-shadow: 0 10px 25px rgb(0, 0, 0);
 
-  padding: 10px;
+.album-item img {
+  width: 100%;
+  height: 100%;
 }
-.albums img {
-  box-shadow: 0 10px 25px rgb(0, 0, 0);
-
-  object-fit: cover;
-  height: 150px;
-  width: 150px;
-}
-.albums p {
+.album-item p {
   margin: 20px 0;
 }
 
-.albums div {
+.album-item {
+  object-fit: contain;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  text-align: center;
+  color: black;
+}
+.album-left-arrow,
+.album-right-arrow {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  min-width: 30px;
   display: flex;
-  align-items: start;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 30px;
+  border-radius: 100px;
 }
 
-#music main h2 {
+.album-details {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  color: black;
+  left: 0;
+  padding: 30px;
+  transition: 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: white;
+}
+
+.album-item:hover > .album-details {
+  opacity: 1;
+}
+
+.swiper-container {
+  position: relative;
+  margin: 0;
+  font-family: Co;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-container div {
+  padding: 10px;
+}
+.swiper-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1.5px solid black;
+}
+
+.swiper-dot.active {
+  background: black;
+}
+.swiper-slide {
+  width: 350px;
+  height: 350px;
+  top: 0;
+  position: absolute;
+
+  transition: 0.4s ease-in-out;
+  opacity: 0;
+}
+.swiper-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+#video-release {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+#video-release img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#video-release button {
+  border-color: white;
+  color: white;
+  margin-top: 100px;
+}
+
+#video-release button:hover {
+  background-color: white;
+  color: black;
+}
+
+#video-release .section-content {
+  z-index: 2;
+  color: white;
+  width: 100%;
+
+  text-align: center;
+}
+#video-release::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background-color: var(--secondary-color);
+  opacity: 0.5;
+}
+
+.album-item img {
+  object-fit: contain;
+}
+#albums {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: wheat;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.swiper-dots {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media only screen and (min-width: 720px) {
+  .albums-container {
+    display: grid;
+    /* max-width: 690px; */
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

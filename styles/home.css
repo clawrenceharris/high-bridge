@@ -1,46 +1,68 @@
 #home header {
-  background: url(../assets/images/wall.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
+  height: auto;
 }
 
+#home header .overlay {
+  top: 0;
+  background-color: #40f1fe;
+}
 #home header img {
-  position: absolute;
-  aspect-ratio: 1/1;
+  position: sticky;
   object-fit: contain;
+  width: 100%;
+  height: auto;
   bottom: 0;
-  max-height: calc(100vh - 100px);
+}
+section {
+  background-color: whitesmoke;
 }
 
-#home header .button {
-  background-color: white;
-  border-radius: 50px;
+#anniversary {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 30px 20px;
+}
+
+#anniversary h2 {
+  font-weight: 700;
+  font-size: 3.4rem;
+  font-family: "blockhead-unplugged";
+}
+header svg {
+  transition: 0.1s;
+}
+header svg:hover {
+  color: black;
+}
+#anniversary h2 span {
+  font-weight: 100;
+}
+#anniversary button {
   position: absolute;
-  top: 20px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#home header .button {
+  background-color: var(--primary-color);
+  position: absolute;
   right: 30px;
-  padding: 15px 25px;
-  margin-top: 100px;
-  transition: 0.2s;
+  color: white;
+  bottom: 120px;
+  font-size: 1.3rem;
+  padding: 15px 30px;
+  font-weight: 500;
+  transition: 0.05s;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 #home header .button:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
-}
-/* #home header::before {
-  content: "";
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 250px;
-  margin: auto;
-  background-color: var(--primary-color);
-  border-radius: 600px;
-} */
-#home h2 {
   background-color: white;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  color: var(--primary-color);
 }
 
 #home .news-item {
@@ -52,21 +74,34 @@
 #home {
   color: black;
 }
-#home nav {
-  margin: 0;
+
+#home header #socials {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 9;
 }
-#home section {
-  background-color: antiquewhite;
+#home header #socials a {
+  cursor: pointer;
+  color: white;
+}
+#home nav {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  bottom: 0;
+  top: unset;
 }
 
 #home header h1 {
-  text-align: center;
   position: absolute;
-  bottom: 20px;
-  font-family: "blockhead-black-face";
+  text-wrap: nowrap;
+  bottom: 120px;
+  left: 20px;
   transform: rotate(-15deg);
-  font-size: clamp(5rem, 20vw, 11rem);
-  /* text-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1); */
+  font-family: "blockhead-black-face";
+  font-size: clamp(5rem, 15vw, 11rem);
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .polaroid-container {

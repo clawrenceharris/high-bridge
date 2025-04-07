@@ -1,0 +1,8 @@
+#tour header .overlay {
+  background-color: var(--primary-color);
+  opacity: 0.4;
+}
+
+#tour main h2 {
+  background-color: var(--primary-color);
+}
