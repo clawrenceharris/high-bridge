@@ -92,9 +92,12 @@ header::after {
 /* Albums */
 #listen {
   width: 100%;
-  background-color: rgb(223, 236, 243);
+  display: flex;
+
   align-items: center;
+  flex-direction: column;
   justify-content: center;
+  background-color: rgb(223, 236, 243);
   height: 75vh;
 }
 .album-item img {
@@ -114,21 +117,6 @@ header::after {
   text-align: center;
   color: black;
 }
-.album-left-arrow,
-.album-right-arrow {
-  cursor: pointer;
-  background-color: black;
-  color: white;
-  min-width: 30px;
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  min-height: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 100px;
-}
 
 .album-left-arrow {
   left: 10px;
@@ -140,13 +128,30 @@ header::after {
   opacity: 1;
 }
 
+.control-button {
+  top: 50%;
+  z-index: 3;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  min-width: 30px;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  min-height: 30px;
+  border-radius: 100px;
+}
+
 /* Swiper */
+
 .swiper-container {
-  position: relative;
-  margin-top: 20px;
-  height: 100%;
   width: 100%;
   display: flex;
+  height: 100%;
+  top: 0;
+  position: absolute;
   align-items: center;
   justify-content: center;
 }
@@ -168,7 +173,6 @@ header::after {
 .swiper-slide {
   width: 250px;
   height: 250px;
-  top: 0;
   position: absolute;
 
   transition: 0.4s ease-in-out;
@@ -178,7 +182,10 @@ header::after {
   opacity: 1;
   z-index: 2;
 }
-
+.play-button.control-button {
+  background-color: white;
+  color: black;
+}
 .swiper-dots {
   display: flex;
   gap: 20px;
