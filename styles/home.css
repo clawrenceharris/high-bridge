@@ -58,7 +58,7 @@ header svg:hover {
   color: var(--primary-color);
 }
 
-#home .news-item {
+#home .journal-item {
   border: 2px solid black;
   padding: 20px;
   width: 400px;
@@ -85,7 +85,7 @@ header svg:hover {
   bottom: 0;
   top: unset;
 }
-#news {
+#journal {
   margin: 0;
   background-color: wheat;
   display: flex;
