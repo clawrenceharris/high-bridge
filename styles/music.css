@@ -94,17 +94,8 @@ header::after {
   background-color: rgb(223, 236, 243);
   align-items: center;
   justify-content: center;
-  height: 70vh;
+  height: 75vh;
 }
-/* 
-#listen {
-  width: 100%;
-  padding: 40px 10px;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-} */
-
 .album-item img {
   width: 100%;
   height: 100%;
@@ -159,8 +150,7 @@ header::after {
 /* Swiper */
 .swiper-container {
   position: relative;
-  margin: 0;
-  font-family: Co;
+  margin-top: 20px;
   height: 100%;
   width: 100%;
   display: flex;
