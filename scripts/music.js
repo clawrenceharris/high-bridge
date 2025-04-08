@@ -1,4 +1,4 @@
-const albums = document.querySelector("#albums");
+const albums = document.querySelector("#listen");
 const swiperContainer = document.querySelector(".swiper-container");
 const slides = document.querySelectorAll(".swiper-slide");
 

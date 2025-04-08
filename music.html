@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/music.css" />
     <script defer src="scripts/music.js"></script>
-    <script defer src="index.js"></script>
+    <script defer src="scripts/parallax.js"></script>
 
     <title>High Bridge: Music</title>
   </head>
@@ -31,34 +31,23 @@
           <li><a href="band.html">Band</a></li>
         </ul>
       </nav>
-
-      <!-- 
-      <div class="parallax-image swiper-container">
-        <div class="album-item swiper-slide">
-          <img src="assets/images/album-cover2.jpg" alt="" />
+      <div class="header-content">
+        <div>
+          <h1>Burning Bridges</h1>
+          <p>
+            Celebrating 20 years, HB's new album is featuring hard-hitting
+            tracks "Forever Gone", "Ashes Remain" and "Rise".
+          </p>
         </div>
-        <div class="album-item swiper-slide">
-          <img src="assets/images/album-cover5.jpg" alt="" />
-        </div>
-        <div class="album-item swiper-slide">
-          <img src="assets/images/album-cover3.jpg" alt="" />
-        </div>
+        <button class="link">CHECK IT OUT</button>
       </div>
+      <img class="parallax-image" src="assets/images/band3.jpeg" />
 
       <div class="overlay"></div>
-      <h1>Music</h1> -->
     </header>
     <main>
-      <section id="video-release">
-        <div class="section-content">
-          <h2>"Oceans"</h2>
-          <p>New music video just dropped!</p>
-
-          <button>WATCH VIDEO</button>
-        </div>
-        <img src="assets/images/band2.jpeg" />
-      </section>
-      <section id="albums">
+      <section id="listen">
+        <h2>Listen</h2>
         <div class="album-left-arrow">
           <svg
             class="w-6 h-6 text-gray-800 dark:text-white"
@@ -80,68 +69,18 @@
         </div>
         <div class="swiper-container">
           <div class="swiper-slide album-item">
-            <div class="album-details">
-              <div>
-                <h3>Fallen</h3>
-
-                <p>RELEASE DATE<br />AUGUST 19, 2024</p>
-              </div>
-              <p>
-                #1 in 10 countries. Featuring the single "Shadows Fade" and the
-                hit tracks "Broken" and "Rise Again."
-              </p>
-              <button>LEARN MORE</button>
-            </div>
+            <img src="assets/images/album-cover5.jpg" alt="" />
+          </div>
+          <div class="swiper-slide album-item">
             <img src="assets/images/album-cover4.jpg" alt="" />
           </div>
 
           <div class="swiper-slide album-item">
-            <div class="album-details">
-              <div>
-                <h3>stick figures</h3>
-
-                <p>RELEASE DATE<br />JAN 23, 2025</p>
-              </div>
-              <p>
-                The new, hit album that features the single "To Lose You" as
-                well as new songs "Hollow Heart", "Can't Explain", and "Night
-                Light".
-              </p>
-              <button>LEARN MORE</button>
-            </div>
             <img src="assets/images/album-cover3.jpg" alt="" />
           </div>
 
           <div class="swiper-slide album-item">
-            <div class="album-details">
-              <div>
-                <h3>Lunar Muse</h3>
-                <p>RELEASE DATE<br />MAY 12, 2026</p>
-              </div>
-              <p>
-                "Lunar Muse", the 5th studio album from High Bridge, featuring
-                the songs "Starlight" and the introspective tracks "Silent
-                Echoes".
-              </p>
-              <button>LEARN MORE</button>
-            </div>
-
             <img src="assets/images/album-cover2.jpg" alt="" />
-          </div>
-
-          <div class="swiper-slide album-item">
-            <div class="album-details">
-              <div>
-                <h3>burning bridges</h3>
-                <p>RELEASE DATE<br />DECEMBER 12, 2025</p>
-              </div>
-              <p>
-                iHeartRadio Award winning album, featuring the hard-hitting
-                single "Glory" and "Ashes Remain".
-              </p>
-              <button>LEARN MORE</button>
-            </div>
-            <img src="assets/images/album-cover5.jpg" alt="" />
           </div>
         </div>
         <div class="album-right-arrow">
@@ -163,6 +102,16 @@
             />
           </svg>
         </div>
+      </section>
+
+      <section id="video-release">
+        <div class="section-content">
+          <p>New music video is avaialable to stream!</p>
+
+          <h2>"Miles From Home"</h2>
+          <button>WATCH VIDEO</button>
+        </div>
+        <img src="assets/images/band2.jpeg" />
       </section>
     </main>
     <footer>

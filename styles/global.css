@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Elite&family=Tilt+Warp&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Elite&family=Tilt+Warp&family=Whisper&display=swap");
 @import url("https://use.typekit.net/ors0lnr.css");
 
 * {
@@ -28,6 +28,14 @@ body {
   margin: auto;
   position: relative;
 }
+
+body #background {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  z-index: -1;
+}
+
 header img {
   position: absolute;
   width: 100%;
@@ -39,14 +47,10 @@ header img {
   width: 100%;
   height: auto;
 }
-
-body #background {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  z-index: -1;
+.header-content {
+  padding: 30px;
+  max-width: 700px;
 }
-
 header {
   color: white;
   max-height: 100vh;
@@ -67,6 +71,8 @@ header .header-top {
   position: fixed;
   z-index: 999;
   top: 0;
+  left: 0;
+  right: 0;
   height: 60px;
   display: flex;
   align-items: center;
@@ -82,11 +88,29 @@ header .overlay {
   width: 100%;
   height: 100%;
 }
+.section-content {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
+section {
+  padding: 30px;
+}
+.section-content p {
+  max-width: 450px;
+}
+
+main {
+  min-height: 100vh;
+}
 header h1 {
   line-height: 120%;
   z-index: 99;
-  padding: 20px;
 }
 
 .link:hover {
@@ -110,7 +134,7 @@ button {
   width: 200px;
   /* font-family: "Roboto"; */
   letter-spacing: 3px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
 }
 button:hover {
@@ -119,7 +143,7 @@ button:hover {
 }
 h2 {
   font-size: clamp(3rem, 9vw, 4rem);
-  margin: 30px 0;
+  margin-top: 28px;
   font-family: "Special Elite";
 }
 
@@ -138,7 +162,7 @@ h3 {
 
 p {
   margin: 10px 0;
-  font-size: 1rem;
+  font-size: clamp(0.7rem, 3vw, 1.2rem);
   letter-spacing: 2px;
   line-height: 200%;
   font-family: "Roboto", sans-serif;
@@ -166,8 +190,8 @@ nav {
   position: sticky;
   margin-top: 60px;
   top: 0;
+  max-height: 90px;
   padding: 10px;
-  height: 80px;
   z-index: 99;
   background-color: black;
 }
@@ -176,7 +200,6 @@ nav ul {
   display: flex;
   gap: 10px;
 
-  height: 100%;
   list-style: none;
 
   background-color: transparent;
@@ -191,6 +214,7 @@ nav a {
   font-family: "Tilt Warp";
   width: 100%;
   display: flex;
+  padding: 20px;
   background-color: black;
   letter-spacing: 4px;
   align-items: center;
