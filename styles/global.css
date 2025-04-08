@@ -97,6 +97,7 @@ header .overlay {
   align-items: center;
   text-align: center;
 }
+
 section h2 {
   padding: 30px;
 }
@@ -110,6 +111,7 @@ main {
 header h1 {
   line-height: 120%;
   z-index: 99;
+  padding: 20px;
 }
 
 .link:hover {
