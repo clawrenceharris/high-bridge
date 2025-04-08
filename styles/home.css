@@ -91,6 +91,7 @@ header svg:hover {
   text-wrap: nowrap;
   bottom: 120px;
   left: 20px;
+  padding: 0;
   transform: rotate(-15deg);
   font-family: "blockhead-black-face";
   font-size: clamp(5rem, 15vw, 11rem);
