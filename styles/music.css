@@ -173,8 +173,8 @@ header::after {
   background: black;
 }
 .swiper-slide {
-  width: 350px;
-  height: 350px;
+  width: 250px;
+  height: 250px;
   top: 0;
   position: absolute;
 
@@ -200,5 +200,9 @@ header::after {
     display: grid;
     /* max-width: 690px; */
     grid-template-columns: repeat(2, 1fr);
+  }
+  .swiper-slide {
+    width: 300px;
+    height: 300px;
   }
 }
