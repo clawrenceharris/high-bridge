@@ -8,17 +8,14 @@
       content="This is the website for the band High Bridge"
     />
     <meta name="author" content="Caleb Harris" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/music.css" />
-    <script defer src="scripts/music.js"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script defer src="scripts/swiper.js"></script>
     <script defer src="scripts/parallax.js"></script>
 
     <title>High Bridge: Music</title>
   </head>
 
   <body id="music">
-    <img id="background" src="assets/images/texture.jpg" />
-
     <header>
       <div class="header-top">
         <a href="index.html">High Bridge</a>
@@ -41,14 +38,14 @@
         </div>
         <button class="link">CHECK IT OUT</button>
       </div>
-      <img class="parallax-image" src="assets/images/band3.jpeg" "/>
+      <img class="parallax-image" src="assets/images/band3.jpeg" />
 
       <div class="overlay"></div>
     </header>
     <main>
-      <section id="listen">
+      <section id="listen" class="swiper-wrapper">
         <h2>Listen</h2>
-        <div class="control-button album-left-arrow">
+        <div class="control-button left-arrow">
           <svg
             class="w-6 h-6 text-gray-800 dark:text-white"
             aria-hidden="true"
@@ -100,7 +97,7 @@
             <img src="assets/images/album-cover2.jpg" alt="" />
           </div>
         </div>
-        <div class="control-button album-right-arrow">
+        <div class="control-button right-arrow">
           <svg
             class="w-6 h-6 text-gray-800 dark:text-white"
             aria-hidden="true"

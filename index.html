@@ -9,16 +9,15 @@
     />
 
     <meta name="author" content="Caleb Harris" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <script defer src="scripts/parallax.js"></script>
+    <script defer src="scripts/swiper.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/ors0lnr.css" />
 
     <title>High Bridge</title>
   </head>
 
   <body id="home">
-    <img id="background" src="assets/images/texture.jpg" />
-
     <header>
       <nav>
         <ul>
@@ -98,11 +97,13 @@
         </a>
       </div>
 
-      <h1><span>HIGH</span> <span>BRIDGE!</span></h1>
+      <h1 class="gradient-text">HIGH BRIDGE</h1>
 
-      <img class="parallax-image" src="assets/images/band.jpeg" />
-      <div class="overlay"></div>
-      <a href="https://music.apple.com/us/new" class="button">Listen Now!</a>
+      <img class="parallax-image" src="assets/images/band1.jpeg" />
+
+      <button href="https://music.apple.com/us/new" class="button">
+        Listen Now!
+      </button>
     </header>
 
     <main>
@@ -122,33 +123,16 @@
           <button>READ MORE</button>
         </div>
       </section>
-      <section id="journal">
-        <h2>Journal</h2>
+      <section id="beach">
+        <img src="assets/images/beach.jpg" />
+        <div class="section-content">
+          <h2>HB on the Beach</h2>
 
-        <div class="journal-item">
           <p>
-            Come see High Bridge play in Ocean City, MD on May 4th, 2025.
-            <a href="#">Learn More</a>
+            Come see High Bridge play on the beach in Ocean City, MD next month
           </p>
         </div>
-        <div class="journal-item">
-          <div class="section-content">
-            <p>Jackson's Birthday was a blast. <a href="#">See More</a></p>
-            <div class="polaroid-container">
-              <img
-                class="polaroid polaroid-2"
-                src="assets/images/polaroid2.png"
-              />
-              <img
-                class="polaroid polaroid-1"
-                src="assets/images/polaroid1.png"
-              />
-            </div>
-          </div>
-        </div>
       </section>
-
-      <section></section>
     </main>
     <footer>
       <a class="link" href="#">BACK TO TOP</a>

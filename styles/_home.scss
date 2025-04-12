@@ -1,0 +1,236 @@
+#home header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  min-height: 100vh;
+}
+
+#home header .overlay {
+  top: 0;
+  background-color: #40f1fe;
+}
+#home header img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  bottom: 0;
+}
+
+#anniversary .section-content {
+  height: 100%;
+  justify-content: space-between;
+}
+
+#anniversary {
+  background-color: whitesmoke;
+
+  height: 340px;
+}
+
+#anniversary h2 {
+  font-weight: 700;
+  font-size: 3.4rem;
+  margin-bottom: 10px;
+  font-family: "blockhead-unplugged";
+}
+header svg {
+  transition: 0.1s;
+}
+header svg:hover {
+  color: black;
+}
+
+.gradient-text {
+  position: absolute;
+  background: linear-gradient(to bottom, rgb(86, 255, 224), rgb(255, 209, 41));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+  top: 0;
+  font-size: clamp(4rem, 15vw, 10rem);
+  left: 50%;
+  text-wrap: nowrap;
+  transform: translateX(-50%);
+  font-family: "blockhead-black-face";
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#home header .button {
+  border-color: white;
+  color: white;
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transition: transform 0.3s ease-out;
+  transform: translateX(-50%);
+  transform-origin: center;
+}
+
+#home header .button:hover {
+  transform: translateX(-50%) scale(1.07);
+
+  background: none;
+}
+
+#home .journal-item {
+  padding: 0;
+}
+
+#home {
+  color: black;
+}
+
+#home header #socials {
+  position: absolute;
+  flex-direction: column;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+  z-index: 9;
+}
+#home header #socials a {
+  cursor: pointer;
+  color: white;
+}
+#home nav ul li {
+  background: none;
+}
+#home nav a {
+  background: none;
+}
+
+#home nav a:hover {
+  opacity: 0.4;
+  margin: 0;
+}
+#home nav {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  bottom: 0;
+  background: none;
+  top: unset;
+}
+
+.polaroid-container {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+
+.polaroid {
+  position: absolute;
+  max-width: 200px;
+  max-height: 240px;
+  bottom: 0;
+}
+
+.polaroid:nth-child(1) {
+  transform: rotate(10deg);
+}
+
+.polaroid:nth-child(2) {
+  transform: rotate(-10deg);
+}
+
+.polaroid:nth-child(3) {
+  transform: rotate(15deg);
+}
+
+.polaroid:nth-child(4) {
+  transform: rotate(-7deg);
+}
+
+#beach h2 {
+  text-shadow: 4px 3px 0 rgb(255, 245, 103);
+  z-index: 9;
+  font-family: "synthemesc", sans-serif;
+  z-index: 9;
+  font-size: 4rem;
+  color: rgb(81, 253, 216);
+  opacity: 1;
+}
+#beach p {
+  z-index: 9;
+  font-size: 1.6rem;
+}
+#beach img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+#beach {
+  height: 60vh;
+  color: white;
+}
+
+#beach .section-content {
+  justify-content: space-evenly;
+}
+#beach:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-image: url(../assets/images/dots.png);
+
+  opacity: 0.2;
+  left: 0;
+  background-repeat: repeat-x;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+}
+#beach::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #3cff46, #efff3f);
+  opacity: 0.6;
+  z-index: 2;
+}
+
+@keyframes jitter {
+  0% {
+    transform: rotate(3deg);
+  }
+  25% {
+    transform: rotate(-3.8deg);
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+  }
+  75% {
+    transform: rotate(-3.3deg);
+  }
+  100% {
+    transform: rotate(2.5deg);
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  #home header::before {
+    padding: 300px;
+  }
+}

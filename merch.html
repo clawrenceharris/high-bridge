@@ -8,15 +8,12 @@
       content="This is the website for the band High Bridge"
     />
     <meta name="author" content="Caleb Harris" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/merch.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <script defer src="scripts/parallax.js"></script>
 
     <title>High Bridge: Merch</title>
   </head>
   <body id="merch">
-    <img id="background" src="assets/images/texture.jpg" />
-
     <header>
       <div class="header-top">
         <a href="index.html">High Bridge</a>
@@ -31,14 +28,52 @@
       </nav>
       <img
         class="parallax-image"
-        src="assets/images/bridge2.png"
+        src="assets/images/album-cover6.jpeg"
         alt="A bridge that looks aged and high up in the sky with fog below it."
       />
-      <div class="overlay"></div>
-
-      <h1>Merch</h1>
+      <div class="content-body">
+        <h1>Buy the New Album:</h1>
+        <h2>EXISTENTIAL</h2>
+        <p>
+          The new album is out now, including the tracks "GRANDURE", "THE END",
+          and "BURNING QUESTION".
+        </p>
+      </div>
     </header>
-    <main></main>
+    <main>
+      <section class="mosaic mosaic-layout-5">
+        <div id="shop-music" class="mosaic-block">
+          <img src="assets/images/album.png" />
+          <h3>MUSIC</h3>
+
+          <button>SHOP</button>
+        </div>
+
+        <div id="shop-gifts" class="mosaic-block">
+          <img src="assets/images/gift.png" />
+          <h3>GIFTS</h3>
+          <button>SHOP</button>
+        </div>
+
+        <div id="shop-merch" class="mosaic-block">
+          <img src="assets/images/merch.jpg" />
+          <h3>MERCH</h3>
+          <button>SHOP</button>
+        </div>
+
+        <div id="shop-books" class="mosaic-block">
+          <img src="assets/images/book.png" />
+          <h3>BOOKS</h3>
+          <button>SHOP</button>
+        </div>
+
+        <div id="shop-art" class="mosaic-block">
+          <img src="assets/images/album-art.png" />
+          <h3>ALBUM ART</h3>
+          <button>SHOP</button>
+        </div>
+      </section>
+    </main>
     <footer></footer>
   </body>
 </html>

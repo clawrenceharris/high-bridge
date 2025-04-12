@@ -1,6 +1,0 @@
-header .overlay {
-  background-color: var(--accent-color);
-}
-header {
-  min-height: 100vh;
-}
