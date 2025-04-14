@@ -396,29 +396,14 @@ header svg:hover {
   opacity: 1;
 }
 
-#tour::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background-color: #000;
-  opacity: 0.3;
-  position: fixed;
-}
-
 #tour header {
   height: auto;
 }
 
-#tour {
-  background-image: url(../assets/images/band5.jpeg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-}
-
-#tour #tour header img {
+#tour img {
   position: fixed;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -428,6 +413,7 @@ header svg:hover {
 }
 
 #tour p {
+  font-size: 1.1rem;
   line-height: 300%;
 }
 
