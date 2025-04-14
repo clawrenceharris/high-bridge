@@ -2,7 +2,7 @@
   content: "";
   position: absolute;
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
   background-color: #000;
   opacity: 0.3;
   position: fixed;
@@ -14,9 +14,8 @@
 #tour {
   background-image: url(../assets/images/band5.jpeg);
   background-repeat: no-repeat;
+  background-position: top center;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 #tour #tour header img {
   position: fixed;
