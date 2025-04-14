@@ -505,7 +505,7 @@ header svg:hover {
 }
 
 #band header {
-  min-height: auto;
+  height: auto;
 }
 
 #band section {
