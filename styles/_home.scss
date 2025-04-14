@@ -1,19 +1,7 @@
 #home header {
   background-size: cover;
   background-repeat: no-repeat;
-  height: auto;
-  min-height: 100vh;
-}
-
-#home header .overlay {
-  top: 0;
-  background-color: #40f1fe;
-}
-#home header img {
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-  bottom: 0;
+  min-height: 50dvh;
 }
 
 #anniversary .section-content {
@@ -40,9 +28,9 @@ header svg:hover {
   color: black;
 }
 
-.gradient-text {
+#home h1 {
   position: absolute;
-  background: linear-gradient(to bottom, rgb(86, 255, 224), rgb(255, 209, 41));
+  background: linear-gradient(to bottom, rgb(86, 255, 162), rgb(255, 209, 41));
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -73,7 +61,7 @@ header svg:hover {
   border-color: white;
   color: white;
   position: absolute;
-  bottom: 120px;
+  bottom: 70px;
   left: 50%;
   transition: transform 0.3s ease-out;
   transform: translateX(-50%);
@@ -94,15 +82,15 @@ header svg:hover {
   color: black;
 }
 
-#home header #socials {
+#home header .socials {
   position: absolute;
   flex-direction: column;
   top: 50%;
   transform: translateY(-50%);
-  left: 30px;
+  left: 10px;
   z-index: 9;
 }
-#home header #socials a {
+#home header .socials a {
   cursor: pointer;
   color: white;
 }
@@ -115,7 +103,9 @@ header svg:hover {
 
 #home nav a:hover {
   opacity: 0.4;
-  margin: 0;
+}
+#home nav li:hover {
+  border-bottom: 2px solid white;
 }
 #home nav {
   position: absolute;
@@ -161,13 +151,13 @@ header svg:hover {
   z-index: 9;
   font-family: "synthemesc", sans-serif;
   z-index: 9;
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 13vw, 5rem);
   color: rgb(81, 253, 216);
   opacity: 1;
 }
 #beach p {
   z-index: 9;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 #beach img {
   object-fit: cover;
@@ -178,7 +168,7 @@ header svg:hover {
   position: absolute;
 }
 #beach {
-  height: 60vh;
+  height: 60dvh;
   color: white;
 }
 
@@ -189,7 +179,7 @@ header svg:hover {
   content: "";
   position: absolute;
   top: 0;
-  background-image: url(../assets/images/dots.png);
+  background-image: url(../assets/images/dots1.png);
 
   opacity: 0.2;
   left: 0;
@@ -232,5 +222,25 @@ header svg:hover {
 @media only screen and (min-width: 720px) {
   #home header::before {
     padding: 300px;
+  }
+
+  #home header .socials {
+    flex-direction: column;
+  }
+  #beach h2 {
+    font-size: 6rem;
+  }
+  #home header {
+    height: 100dvh;
+  }
+
+  #home header .socials {
+    left: 30px;
+  }
+  #home header .button {
+    bottom: 120px;
+  }
+  #home #beach p {
+    font-size: 1.6rem;
   }
 }

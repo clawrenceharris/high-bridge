@@ -1,0 +1,41 @@
+#shop header h1,
+#shop header h2 {
+  font-family: "brevia";
+}
+#shop header h1 {
+  font-size: clamp(2rem, 12vw, 7rem);
+}
+#shop header h2 {
+  font-weight: 300;
+  font-size: clamp(2rem, 6vw, 2.7rem);
+}
+.shop {
+  min-height: 100dvh;
+}
+#shop header p {
+  max-width: 350px;
+}
+
+#shop-merch {
+  background-color: black;
+}
+
+#shop-art {
+  background-color: lightgray;
+}
+#shop-gifts {
+  background-color: rgb(169, 246, 255);
+}
+#shop-books {
+  background-color: wheat;
+}
+#shop-music {
+  background-color: rgb(255, 192, 192);
+}
+.content-body {
+  position: absolute;
+  bottom: 0;
+  margin: 20px;
+  border: 2px solid white;
+  padding: 20px;
+}

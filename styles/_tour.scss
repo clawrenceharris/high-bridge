@@ -1,7 +1,52 @@
-#tour header .overlay {
-  background-color: var(--primary-color);
-  opacity: 0.4;
+#tour header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  position: fixed;
 }
 #tour header {
-  min-height: 100vh;
+  min-height: auto;
+}
+
+#tour header img {
+  position: fixed;
+}
+#tour {
+  color: white;
+}
+#tour p {
+  line-height: 300%;
+}
+#tour main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#tour h1 {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+  max-width: 400px;
+  align-self: center;
+  font-family: "Roboto";
+  font-weight: 100;
+}
+#tour h2 {
+  text-align: center;
+}
+
+#tour section {
+  border: 1px solid white;
+  padding: 10px 15px;
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 720px) {
+  #tour section {
+    padding: 10px 60px;
+  }
 }

@@ -1,0 +1,137 @@
+#band header {
+  min-height: auto;
+}
+#band section {
+  width: 100%;
+  background-color: white;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#band h2 {
+  font-family: "blockhead-unplugged";
+}
+#band .section-left {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid black;
+  padding: 10px 20px;
+}
+
+#band .section-content {
+  justify-content: start;
+  max-width: 800px;
+}
+#band section .socials a {
+  width: 20px;
+  height: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#band section .socials img {
+  width: 20px;
+  height: 20px;
+}
+#band section .socials img {
+  filter: invert(0);
+}
+
+#band section .socials {
+  gap: 8px;
+}
+#band h2 {
+  line-height: 0;
+}
+#band p {
+  margin: 10px;
+}
+#band section p {
+  text-align: left;
+}
+#band .section-right {
+  flex: 1;
+  max-height: 50%;
+  position: absolute;
+  height: 500px;
+  bottom: 90px;
+}
+
+#band section:nth-child(4) {
+  background-color: rgb(255, 215, 215);
+}
+
+#band section:nth-child(3) .section-left {
+  border: none;
+  background-color: rgba(169, 246, 255, 0.4);
+}
+
+#band section:nth-child(1) .section-left {
+  border: none;
+  background-color: rgb(255, 215, 215);
+}
+#band section:nth-child(1) {
+  background-color: white;
+}
+#band section:nth-child(2) {
+  background-color: bisque;
+}
+
+#band .section-right img {
+  width: 100%;
+  left: 0;
+
+  object-fit: cover;
+  min-height: 100%;
+}
+
+@media only screen and (min-width: 720px) {
+  #band .section-content {
+    flex-direction: row;
+  }
+  #band .section-left {
+    padding: 40px 40px 20px;
+  }
+  #band section:nth-child(odd) .section-content {
+    flex-direction: row-reverse;
+  }
+  #band .section-right img {
+    width: 500px;
+    object-fit: cover;
+    height: auto;
+  }
+  #band .section-left {
+    position: absolute;
+    top: 30px;
+  }
+  #band section:nth-child(odd) .section-left {
+    right: 30px;
+  }
+  #band section:nth-child(even) .section-left {
+    left: 30px;
+  }
+  #band section:nth-child(odd) .section-right {
+    left: -100px;
+  }
+  #band section:nth-child(even) .section-right {
+    right: 0;
+  }
+  #band .section-right {
+    flex: 1;
+    height: 100%;
+
+    width: 100%;
+    position: absolute;
+    bottom: 200px;
+    width: 50%;
+  }
+  #band section {
+    height: 80dvh;
+  }
+}

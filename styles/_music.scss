@@ -6,7 +6,11 @@
 #music header img {
   position: relative;
 }
-
+#music header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 50dvh;
+}
 #music .header-content {
   color: white;
   z-index: 9;
@@ -58,7 +62,7 @@
 }
 
 #video-release {
-  height: 60vh;
+  height: 70dvh;
   display: flex;
   align-items: center;
 }
@@ -75,7 +79,11 @@
   border-color: white;
   color: white;
 }
-
+#video-release h2 {
+  font-family: "felt-tip-senior", sans-serif;
+  font-size: clamp(3rem, 12vw, 7rem);
+  font-weight: 300;
+}
 #video-release button:hover {
   background-color: white;
   color: black;

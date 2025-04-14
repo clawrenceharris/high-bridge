@@ -4,7 +4,7 @@
 @import "home";
 @import "music";
 @import "tour";
-@import "merch";
+@import "shop";
 @import "band";
 
 * {
@@ -102,7 +102,7 @@ html {
 }
 body {
   color: black;
-  max-width: 1200px;
+  max-width: 1700px;
   margin: auto;
   position: relative;
   background-color: black;
@@ -111,20 +111,21 @@ body {
 }
 
 header img {
-  width: 100%;
-
-  object-fit: contain;
-
-  width: 100%;
   height: 100%;
+  object-fit: cover;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 .header-content {
   padding: 30px;
   max-width: 700px;
 }
 header {
+  transition: 0.3s;
   color: white;
-  max-height: 100vh;
+  max-height: 100dvh;
+  min-height: 100dvh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -179,7 +180,7 @@ section h2 {
 }
 
 main {
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 header h1 {
   line-height: 120%;
@@ -199,14 +200,15 @@ header h1 {
 
 button {
   background: none;
-  border: 3px solid black;
+  border: 1.5px solid black;
   color: black;
-  font-family: "Tilt Warp";
-
-  padding: 15px;
-  width: 200px;
+  font-family: "Roboto";
+  font-weight: 300;
+  padding: 10px;
+  min-width: 160px;
+  max-width: 200px;
   letter-spacing: 3px;
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   cursor: pointer;
 }
 button:hover {
@@ -220,7 +222,7 @@ h2 {
 
 h1 {
   font-weight: 900;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "blockhead";
   font-size: clamp(5rem, 20vw, 10rem);
 }
 
@@ -275,6 +277,7 @@ nav ul {
   list-style: none;
 }
 nav li {
+  transition: 0.2s ease;
   height: 100%;
   width: 100%;
   display: flex;
@@ -295,14 +298,14 @@ nav a {
 }
 
 nav a:not(.active):hover {
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 nav li {
   background-color: white;
 }
 
 nav a.active {
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   color: white;
 }
 footer svg {
@@ -326,15 +329,132 @@ footer {
   color: white;
   background-color: black;
 }
-
-#socials {
-  gap: 20px;
+.socials {
+  gap: 25px;
   display: flex;
+  transition: 0.2s;
+}
+.socials a {
+  width: 20px;
+  height: 20px;
+}
+.socials img {
+  width: 100%;
+  filter: invert(1);
+  height: 100%;
+}
+
+// Mosaic Layout
+
+.mosaic {
+  display: grid;
+  min-height: 150vh;
+}
+
+.mosaic-block {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.mosaic-block img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  transition: scale 0.5s;
+}
+
+.mosaic-block:hover img {
+  scale: 1.05;
+}
+.mosaic-block button {
+  border-color: transparent;
+  color: black;
+  background-color: #ffffffde;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+  align-self: center;
+  width: 90%;
+}
+
+.mosaic-block button:hover {
+  background-color: rgba(242, 242, 242, 0.785);
+}
+
+.mosaic {
+  grid-template-columns: 1fr;
+}
+.mosaic-block h3 {
+  position: relative;
+  padding: 1.5rem;
+  font-size: 1.3125rem;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.1) 10%, transparent);
+  user-select: none;
 }
 
 @media only screen and (min-width: 720px) {
   .swiper-slide {
     width: 300px;
     height: 300px;
+  }
+  .socials {
+    gap: 30px;
+  }
+
+  button {
+    padding: 15px;
+    width: 200px;
+  }
+
+  .mosaic-layout-2,
+  .mosaic-layout-3,
+  .mosaic-layout-5 {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .mosaic-layout-3 .mosaic-block,
+  .mosaic-layout-4 .mosaic-block {
+    min-height: 250px;
+  }
+
+  .mosaic-layout-3 .mosaic-block:nth-child(1) {
+    grid-area: 1 / 1 / 3 / 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .mosaic-layout-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mosaic-layout-4 .mosaic-block:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .mosaic-layout-4 .mosaic-block:nth-child(4) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .mosaic-layout-5 .mosaic-block {
+    min-height: 170px;
+  }
+
+  .mosaic-layout-5 .mosaic-block:nth-child(1),
+  .mosaic-layout-5 .mosaic-block:nth-child(4) {
+    grid-row: span 3;
+  }
+
+  .mosaic-layout-5 .mosaic-block:nth-child(2),
+  .mosaic-layout-5 .mosaic-block:nth-child(3),
+  .mosaic-layout-5 .mosaic-block:nth-child(5) {
+    grid-row: span 2;
   }
 }
