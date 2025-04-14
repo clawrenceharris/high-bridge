@@ -412,6 +412,8 @@ header svg:hover {
 
 #tour header img {
   position: fixed;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #tour {
