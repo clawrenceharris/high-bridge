@@ -1,4 +1,4 @@
-#tour header::after {
+#tour::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -7,11 +7,17 @@
   opacity: 0.3;
   position: fixed;
 }
+
 #tour header {
   height: auto;
 }
-
-#tour header img {
+#tour {
+  background-image: url(../assets/images/band5.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#tour #tour header img {
   position: fixed;
   object-fit: cover;
 }
