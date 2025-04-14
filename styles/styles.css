@@ -572,10 +572,9 @@ header svg:hover {
 
 #band .section-right {
   flex: 1;
-  max-height: 50%;
   position: absolute;
   height: 500px;
-  bottom: 90px;
+  bottom: 0;
 }
 
 #band section:nth-child(4) {
