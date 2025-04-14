@@ -124,8 +124,7 @@ header img {
 header {
   transition: 0.3s;
   color: white;
-  max-height: 100dvh;
-  min-height: 100dvh;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;

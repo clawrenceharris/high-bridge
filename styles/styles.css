@@ -3,7 +3,7 @@
 #home header {
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 50dvh;
+  min-height: 50vh;
 }
 
 #anniversary .section-content {
@@ -781,8 +781,7 @@ header img {
 header {
   transition: 0.3s;
   color: white;
-  max-height: 100dvh;
-  min-height: 100dvh;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
