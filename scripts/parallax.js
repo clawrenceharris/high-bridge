@@ -1,7 +1,5 @@
 window.addEventListener("scroll", function () {
   let scrollPosition = window.scrollY;
-  const images = document.querySelectorAll(".parallax-image");
-  images.forEach((item) => {
-    item.style.transform = `translateY(${scrollPosition * 0.2}px)`;
-  });
+  const image = document.querySelector(".parallax-image");
+  image.style.transform = `translateY(${scrollPosition * 0.1}px)`;
 });

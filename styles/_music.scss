@@ -1,28 +1,23 @@
 /* Header */
 #music header {
-  height: auto;
-  position: relative;
+  max-height: 70dvh;
 }
 #music header img {
   position: relative;
 }
-#music header {
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 50dvh;
-}
 #music .header-content {
   color: white;
   z-index: 9;
-  width: 100%;
+  border: 2px solid white;
+  margin: 20px;
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 60%;
-  padding: 25px;
+  min-height: 30%;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 #music header h1 {
@@ -47,6 +42,7 @@
   background-color: #000;
   opacity: 0.5;
 }
+
 #music header button:hover {
   border: none;
   background-color: lightgray;

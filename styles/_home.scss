@@ -1,7 +1,7 @@
 #home header {
   background-size: cover;
   background-repeat: no-repeat;
-  max-height: 50vh;
+  max-height: 60vh;
 }
 
 #anniversary .section-content {
@@ -10,9 +10,10 @@
 }
 
 #anniversary {
+  padding: 40px;
   background-color: whitesmoke;
 
-  height: 340px;
+  height: 50vh;
 }
 
 #anniversary h2 {
@@ -120,7 +121,6 @@ header svg:hover {
   display: flex;
   height: 300px;
   width: 300px;
-  position: relative;
 }
 
 .polaroid {
@@ -231,7 +231,7 @@ header svg:hover {
     font-size: 6rem;
   }
   #home header {
-    height: 100dvh;
+    min-height: 100vh;
   }
 
   #home header .socials {

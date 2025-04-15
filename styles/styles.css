@@ -3,7 +3,7 @@
 #home header {
   background-size: cover;
   background-repeat: no-repeat;
-  max-height: 50vh;
+  max-height: 60vh;
 }
 
 #anniversary .section-content {
@@ -12,8 +12,9 @@
 }
 
 #anniversary {
+  padding: 40px;
   background-color: whitesmoke;
-  height: 340px;
+  height: 50vh;
 }
 
 #anniversary h2 {
@@ -126,7 +127,6 @@ header svg:hover {
   display: flex;
   height: 300px;
   width: 300px;
-  position: relative;
 }
 
 .polaroid {
@@ -240,7 +240,7 @@ header svg:hover {
     font-size: 6rem;
   }
   #home header {
-    height: 100dvh;
+    min-height: 100vh;
   }
   #home header .socials {
     left: 30px;
@@ -254,32 +254,26 @@ header svg:hover {
 }
 /* Header */
 #music header {
-  height: auto;
-  position: relative;
+  max-height: 70dvh;
 }
 
 #music header img {
   position: relative;
 }
 
-#music header {
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 50dvh;
-}
-
 #music .header-content {
   color: white;
   z-index: 9;
-  width: 100%;
+  border: 2px solid white;
+  margin: 20px;
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 60%;
-  padding: 25px;
+  min-height: 30%;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 #music header h1 {
@@ -417,6 +411,10 @@ header svg:hover {
   line-height: 300%;
 }
 
+#tour .socials a {
+  filter: invert(0);
+}
+
 #tour main {
   padding: 20px;
   display: flex;
@@ -426,7 +424,7 @@ header svg:hover {
 #tour h1 {
   text-align: center;
   padding: 20px;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
   padding-bottom: 10px;
   max-width: 400px;
   align-self: center;
@@ -699,7 +697,6 @@ html {
   display: flex;
   height: 100%;
   top: 0;
-  position: relative;
   margin-bottom: 30px;
   align-items: center;
   justify-content: center;
@@ -753,7 +750,6 @@ body {
   color: black;
   max-width: 1700px;
   margin: auto;
-  position: relative;
   background-color: black;
   background-attachment: fixed;
   background-image: url(../assets/images/texture.jpg);
@@ -777,7 +773,6 @@ header {
   transition: 0.3s;
   color: white;
   height: 100vh;
-  position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -810,10 +805,6 @@ header .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-}
-
-img {
-  transition: 0.3s;
 }
 
 .section-content {
@@ -1019,7 +1010,6 @@ footer {
 }
 
 .mosaic-block {
-  position: relative;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -1059,7 +1049,6 @@ footer {
 }
 
 .mosaic-block h3 {
-  position: relative;
   padding: 1.5rem;
   font-size: 1.3125rem;
   font-weight: 500;
