@@ -11,9 +11,6 @@
   justify-content: center;
 }
 
-#band h2 {
-  font-family: "blockhead-unplugged";
-}
 #band .section-left {
   display: flex;
   align-items: center;
@@ -57,10 +54,11 @@
 }
 #band .section-right {
   flex: 1;
-  height: 70%;
+  height: 65%;
   position: absolute;
   bottom: 0;
   width: auto;
+  overflow: visible;
 }
 
 #band section:nth-child(4) {
@@ -103,8 +101,10 @@
   }
   #band .section-right img {
     width: 500px;
+    overflow: visible;
+
     object-fit: cover;
-    height: auto;
+    max-height: 90%;
   }
   #band .section-left {
     position: absolute;
@@ -123,12 +123,8 @@
     right: 0;
   }
   #band .section-right {
-    flex: 1;
     height: 100%;
-
-    width: 100%;
     position: absolute;
-    bottom: 0;
     width: 50%;
   }
   #band section {
