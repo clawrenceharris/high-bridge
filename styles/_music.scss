@@ -1,6 +1,6 @@
 /* Header */
 #music header {
-  max-height: 70dvh;
+  height: 100vh;
 }
 #music header img {
   position: relative;
@@ -120,8 +120,4 @@
   height: 100%;
   text-align: center;
   color: black;
-}
-
-.album-item:hover > .album-details {
-  opacity: 1;
 }

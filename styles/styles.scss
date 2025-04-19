@@ -196,7 +196,9 @@ header h1 {
   max-width: 40%;
   grid-template-columns: repeat(2, 1fr);
 }
-
+.row-container {
+  display: flex;
+}
 button,
 .button {
   background: none;

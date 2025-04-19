@@ -2,7 +2,7 @@
   height: auto;
 }
 
-#tour img {
+#tour > img {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -11,12 +11,75 @@
 #tour {
   color: white;
 }
+#tour .tour-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#tour .button {
+  text-align: center;
+  border-color: white;
+  color: white;
+  margin: 40px 0;
+}
 #tour p {
   font-size: 1.1rem;
 
   line-height: 300%;
 }
+#tour h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+}
+#upcoming img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: white solid 3px;
+}
+#upcoming div:first-child {
+  flex: 1;
+}
 
+#upcoming div:last-child {
+  flex: 0.6;
+}
+#upcoming .section-content {
+  align-items: start;
+  gap: 30px;
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  justify-content: space-between;
+  text-align: left;
+}
+#upcoming .details {
+  flex: 1;
+}
+
+#upcoming {
+  height: 90vh;
+}
+#tour h1 span {
+  font-weight: 600;
+}
+#tour .map {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#tour .map iframe {
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 #tour .socials a {
   filter: invert(0);
 }
@@ -26,12 +89,6 @@
   flex-direction: column;
 }
 #tour h1 {
-  text-align: center;
-  padding: 20px;
-  border-bottom: 2px solid white;
-  padding-bottom: 10px;
-  max-width: 400px;
-  align-self: center;
   font-family: "Roboto";
   font-weight: 100;
 }
@@ -48,5 +105,9 @@
 @media screen and (min-width: 720px) {
   #tour section {
     padding: 10px 60px;
+  }
+
+  #tour .section-content {
+    flex-direction: row;
   }
 }
