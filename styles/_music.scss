@@ -1,23 +1,9 @@
 /* Header */
 #music header {
-  height: 100vh;
+  min-height: auto;
 }
 #music header img {
   position: relative;
-}
-#music .header-content {
-  color: white;
-  z-index: 9;
-  border: 2px solid white;
-  margin: 20px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  min-height: 30%;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
 }
 
 #music header h1 {
@@ -26,26 +12,13 @@
   font-family: "Whisper";
   font-size: clamp(3rem, 13vw, 8rem);
 }
-#music .header-content button {
-  background-color: whitesmoke;
-  color: black;
-  padding: 15px;
-  text-align: center;
-  max-width: 200px;
-}
-
 #music header::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: #000;
-  opacity: 0.5;
-}
-
-#music header button:hover {
-  border: none;
-  background-color: lightgray;
+  opacity: 0.7;
 }
 
 /* Video Release */
@@ -68,21 +41,15 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: var(--secondary-color);
-  opacity: 0.5;
+  background-color: rgba(248, 62, 62, 0.5);
 }
 #video-release button {
-  border-color: white;
-  color: white;
+  filter: invert(1);
 }
 #video-release h2 {
   font-family: "felt-tip-senior", sans-serif;
   font-size: clamp(3rem, 12vw, 7rem);
   font-weight: 300;
-}
-#video-release button:hover {
-  background-color: white;
-  color: black;
 }
 
 #video-release .section-content {
@@ -96,13 +63,15 @@
 /* Albums */
 #listen {
   width: 100%;
-  display: flex;
-
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
   background-color: rgb(223, 236, 243);
   height: 75vh;
+}
+
+.section-content {
+  max-width: 600px;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
 }
 .album-item img {
   width: 100%;
@@ -120,4 +89,73 @@
   height: 100%;
   text-align: center;
   color: black;
+}
+
+/* Swiper */
+
+.control-button.left-arrow {
+  left: 10px;
+}
+.control-button.right-arrow {
+  right: 10px;
+}
+.control-button {
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  padding: 20px;
+  display: flex;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-container {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  top: 0;
+
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-container div {
+  padding: 10px;
+}
+.swiper-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1.5px solid black;
+}
+
+.swiper-dot.active {
+  background: black;
+}
+.swiper-slide {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  transition: 0.4s ease-in-out;
+  opacity: 0;
+}
+.swiper-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+.play-button.control-button {
+  background-color: white;
+  color: black;
+}
+.swiper-dots {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }

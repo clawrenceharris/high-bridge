@@ -1,6 +1,6 @@
 #shop header h1,
 #shop header h2 {
-  font-family: "brevia";
+  font-family: "brevia", Geneva, Tahoma, sans-serif;
 }
 #shop header h1 {
   font-size: clamp(2rem, 12vw, 7rem);
@@ -9,28 +9,45 @@
   font-weight: 300;
   font-size: clamp(2rem, 6vw, 2.7rem);
 }
-.shop {
-  min-height: 100dvh;
+
+#shop header button {
+  filter: invert(1);
+  margin-top: 30px;
 }
+
 #shop header p {
   max-width: 350px;
 }
 
 #shop-merch {
-  background-color: black;
+  background: url(../assets/images/texture.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #shop-art {
-  background-color: lightgray;
+  background-color: var(--secondary-color);
 }
 #shop-gifts {
   background-color: rgb(169, 246, 255);
 }
 #shop-books {
-  background-color: wheat;
+  background-color: var(--tertiary-color);
 }
 #shop-music {
-  background-color: rgb(255, 192, 192);
+  background: url(../assets/images/led-dots.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#shop-music img {
+  max-width: 60%;
+  height: auto;
+  align-self: center;
+  justify-self: center;
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
 }
 .content-body {
   position: absolute;

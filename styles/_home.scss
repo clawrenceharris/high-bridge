@@ -6,6 +6,7 @@
 
 #anniversary .section-content {
   height: 100%;
+
   justify-content: space-between;
 }
 
@@ -14,8 +15,8 @@
 }
 
 #newsletter {
-  background-color: bisque;
-  height: 50vh;
+  background-color: var(--tertiary-color);
+  height: 80vh;
   justify-content: space-evenly;
   display: flex;
   align-items: center;
@@ -30,17 +31,16 @@
 
 #anniversary h2 {
   font-size: 3.4rem;
-  font-family: "blockhead-unplugged";
+  font-family: "blockhead-unplugged", "Barriecito", sans-serif;
 }
-header svg {
-  transition: 0.1s;
+header .socials img:hover {
+  filter: invert(0);
 }
-header svg:hover {
-  color: black;
+.socials img:hover {
+  opacity: 0.7;
 }
-
 #home h1 {
-  position: absolute;
+  text-align: center;
   background: linear-gradient(to bottom, rgb(86, 255, 162), rgb(255, 209, 41));
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -48,13 +48,10 @@ header svg:hover {
 
   top: 0;
   font-size: clamp(4rem, 15vw, 10rem);
-  left: 50%;
-  text-wrap: nowrap;
-  transform: translateX(-50%);
-  font-family: "blockhead-black-face";
+  width: 100%;
+  left: 20px;
+  font-family: "blockhead-black-face", "Barriecito", sans-serif;
   font-weight: bold;
-  display: flex;
-  flex-direction: column;
 }
 
 @keyframes gradientAnimation {
@@ -71,7 +68,6 @@ header svg:hover {
 #home header .button {
   border-color: white;
   color: white;
-  text-align: center;
   position: absolute;
   bottom: 70px;
   left: 50%;
@@ -142,21 +138,6 @@ header svg:hover {
   bottom: 0;
 }
 
-.polaroid:nth-child(1) {
-  transform: rotate(10deg);
-}
-
-.polaroid:nth-child(2) {
-  transform: rotate(-10deg);
-}
-
-.polaroid:nth-child(3) {
-  transform: rotate(15deg);
-}
-
-.polaroid:nth-child(4) {
-  transform: rotate(-7deg);
-}
 
 #beach h2 {
   text-shadow: 4px 3px 0 rgb(255, 245, 103);
@@ -211,6 +192,152 @@ header svg:hover {
   background: linear-gradient(to left, #3cff46, #efff3f);
   opacity: 0.6;
   z-index: 2;
+}
+
+.modal {
+  z-index: 999;
+  left: 0;
+  position: fixed;
+
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.modal-description {
+  text-align: center;
+}
+.modal.open {
+  display: flex;
+}
+.modal h2 {
+  text-align: center;
+  font-size: clamp(2.2rem, 6vw, 3rem);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 30px;
+  padding: 15px;
+  width: 100%;
+
+  max-width: 500px;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.polaroid{
+  position: absolute;
+  max-width: 190px;
+  height: auto;
+
+
+}
+
+.polaroid:nth-child(1){
+left: 0;
+top:0;
+
+transform: rotate(10deg);
+
+}
+
+.polaroid:nth-child(2){
+  right: 0;
+  
+  bottom:0;
+  transform: rotate(-10deg);
+
+  }
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: var(--primary-color); /* Use your theme color */
+}
+
+.modal-description {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin: 30px 0;
+  font-family: "Roboto";
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.form-group input[type="email"]:focus {
+  outline: none;
+  border-color: skyblue; /* Use your theme color */
+  box-shadow: 0 0 5px rgba(var(--primary-color-rgb), 0.5); /* Use your theme color */
+}
+
+.form-group .form-hint {
+  font-size: 14px;
+  color: #777;
+  margin-top: 3px;
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.form-group label[for="newsletter-opt-in"] {
+  display: inline-block;
+  font-weight: normal;
+}
+.modal-bottom {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+button:hover img {
+  filter: invert(1);
+}
+.close-button {
+  position: relative;
+
+  height: 50px;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: unset;
+  width: 50px;
+  border: 1.5px solid black;
+}
+
+.confirmation-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e6ffe6;
+  color: #38761d;
+  border: 1px solid #8fbc8f;
+  border-radius: 4px;
+}
+
+.error-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border: 1px solid #e74c3c;
+  border-radius: 4px;
 }
 
 @keyframes jitter {

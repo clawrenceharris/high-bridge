@@ -1,27 +1,18 @@
 #tour header {
-  height: auto;
+  min-height: auto;
 }
 
 #tour > img {
   position: fixed;
   width: 100%;
+
   height: 100%;
   object-fit: cover;
 }
 #tour {
   color: white;
 }
-#tour .tour-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-#tour .button {
-  text-align: center;
-  border-color: white;
-  color: white;
-  margin: 40px 0;
-}
+
 #tour p {
   font-size: 1.1rem;
 
@@ -32,10 +23,14 @@
 }
 #upcoming img {
   width: 100%;
-  height: 100%;
+
+  height: auto;
+  flex:1;
   object-fit: cover;
+  padding: 5px;
   border: white solid 3px;
 }
+
 #upcoming div:first-child {
   flex: 1;
 }
@@ -43,39 +38,36 @@
 #upcoming div:last-child {
   flex: 0.6;
 }
-#upcoming .section-content {
-  align-items: start;
-  gap: 30px;
-  display: flex;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-
-  justify-content: space-between;
-  text-align: left;
-}
 #upcoming .details {
   flex: 1;
 }
-
+#tour button {
+  filter: invert(1);
+  margin: 30px 0;
+}
 #upcoming {
-  height: 90vh;
+  min-height: 80vh;
+  margin: 0;
+  padding: 20px;
 }
 #tour h1 span {
   font-weight: 600;
 }
 #tour .map {
+  border: white solid 3px;
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
   width: 100%;
-  height: 100%;
+  flex:1;
+  height: auto;
   display: flex;
 }
-
 #tour .map iframe {
   left: 0;
   top: 0;
-  border-radius: 4px;
+  padding: 5px;
+
   height: 100%;
   width: 100%;
   position: absolute;
@@ -96,18 +88,24 @@
   text-align: center;
 }
 
-#tour section {
-  border: 1px solid white;
-  padding: 10px 15px;
+#tour section:not(:first-child) {
   margin-top: 60px;
 }
 
+#tour section {
+  border: 1px solid white;
+  padding: 10px 15px;
+}
 @media screen and (min-width: 720px) {
   #tour section {
     padding: 10px 60px;
   }
 
-  #tour .section-content {
+ 
+  #tour #upcoming {
+    display: flex;
     flex-direction: row;
+    padding: 70px;
+
   }
 }

@@ -1,20 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="This is the website for the band High Bridge"
-    />
+      content="The official website of High Bridge, blending emotional pop energy with hard-hitting rock intensity. Get the latest music, tour dates, news, videos, and exclusive content from the band. Sign up for our newsletter!">
 
-    <meta name="author" content="Caleb Harris" />
-    <link rel="stylesheet" href="styles/styles.css" />
+    <meta name="author" content="Caleb Harris">
+    <link rel="stylesheet" href="styles/styles.css">
     <script defer src="scripts/parallax.js"></script>
-    <script defer src="scripts/swiper.js"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/ors0lnr.css" />
 
     <title>High Bridge</title>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const openModalButton = document.getElementById("signup-button");
+        const closeModalButton = document.getElementById("modal-close-button");
+        const modal = document.getElementById("newsletter-modal");
+        const signupForm = document.getElementById("newsletter-signup-form");
+        const submitButton = document.querySelector(
+          "#newsletter-signup-form .primary"
+        );
+        const confirmationMessage = document.getElementById(
+          "newsletterConfirmation"
+        );
+        const errorMessage = document.getElementById("newsletterError");
+
+        openModalButton.addEventListener("click", () => {
+          openModal();
+        });
+
+        closeModalButton.addEventListener("click", () => {
+          closeModal();
+        });
+
+        modal.addEventListener("click", (event) => {
+          if (event.target === modal) {
+            closeModal();
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            closeModal();
+          }
+        });
+
+        signupForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          modal.classList.remove("open");
+          modal.setAttribute("aria-hidden", "true");
+        });
+
+        function closeModal() {
+          if (modal.classList.contains("open")) {
+            openModalButton.focus();
+            modal.classList.remove("open");
+            modal.setAttribute("aria-hidden", "true");
+            submitButton.blur();
+            signupForm.reset();
+          }
+        }
+        function openModal() {
+          modal.classList.add("open");
+          modal.setAttribute("aria-hidden", "false");
+          closeModalButton.focus();
+        }
+      });
+    </script>
   </head>
 
   <body id="home">
@@ -29,26 +83,47 @@
       </nav>
       <div class="socials">
         <a href="https://youtube.com">
-          <img width="30" height="30" src="assets/icons/icon-youtube.svg" />
+          <img
+            width="30"
+            height="30"
+            src="assets/icons/icon-youtube.svg"
+            alt="YouTube"
+          >
         </a>
 
         <a href="https://x.com">
-          <img width="30" height="30" src="assets/icons/icon-x.svg" />
+          <img width="30" height="30" src="assets/icons/icon-x.svg" alt="X" >
         </a>
         <a href="https://instagram.com">
-          <img width="30" height="30" src="assets/icons/icon-instagram.svg" />
+          <img
+            width="30"
+            height="30"
+            src="assets/icons/icon-instagram.svg"
+            alt="Instagram"
+          >
         </a>
 
         <a href="https://apple.music.com">
-          <img width="30" height="30" src="assets/icons/icon-apple-music.svg" />
+          <img
+            width="30"
+            height="30"
+            src="assets/icons/icon-apple-music.svg"
+            alt="Apple Music"
+          >
         </a>
       </div>
 
       <h1>HIGH BRIDGE</h1>
 
-      <img class="parallax-image" src="assets/images/band1.jpeg" />
+      <img
+        alt="Three male band members in red lighting wearing futuristic sunglasses, looking upward with a dramatic, stylized expression"
+        class="parallax-image"
+        src="assets/images/band1.jpg"
+      >
 
-      <a href="https://music.apple.com/us/new" class="button"> Listen Now! </a>
+      <a href="https://music.apple.com/us/new" class="button primary">
+        Listen Now!
+      </a>
     </header>
 
     <main>
@@ -65,11 +140,11 @@
               >!
             </p>
           </div>
-          <button>READ MORE</button>
+          <button class="primary">READ MORE</button>
         </div>
       </section>
       <section id="beach">
-        <img src="assets/images/beach.jpg" />
+        <img width="700" height="933" src="assets/images/beach.jpg" alt="A wide shot of a sandy beach under a clear blue sky with a few scattered clouds. Footprints lead from the bottom center of the frame towards a small, white building with a red roof in the distance, situated near a rocky breakwater where gentle waves meet the shore. The horizon line shows a calm sea meeting the sky." >
         <div class="section-content">
           <h2>HB on the Beach</h2>
 
@@ -78,28 +153,105 @@
       </section>
 
       <section id="newsletter">
-        <h2>Join Our Newsletter</h2>
-        <p>Get the latest updates and stories through our newsletter</p>
+          <div class="section-content">
+            <img width="725"  height="570" class="polaroid" src="assets/images/polaroid2.jpg" alt="An polaroid framed photograph of an ibex with very large, curved horns is inside a wooden enclosure, eating from a trough. The ibex has a greyish-brown coat and dark legs. The enclosure has wooden walls and a visible wooden roof structure.">
 
-        <button>SIGN UP</button>
+        <img width="725"  height="570" class="polaroid" src="assets/images/polaroid1.jpg" alt="An polaroid framed photograph of a sandy beach under a clear blue sky with scattered clouds. Footprints lead from the foreground towards a small white building with an orange roof in the distance, situated near a rocky area where waves meet the shore. The words &quot;High Bridge&quot; are handwritten on a textured beige strip at the bottom of the image.">
+      
+          <h2 id="newsletter-title">Join Our Newsletter</h2>
+          <p>Get the latest updates and stories through our newsletter</p>
+
+          <button class="primary" id="signup-button">SIGN UP</button>
+        </div>
+        <div
+          id="newsletter-modal"
+          class="modal"
+          aria-labelledby="newsletter-title"
+          aria-modal="true"
+          role="dialog"
+        >
+          <div class="modal-content">
+            <button
+              class="close-button"
+              id="modal-close-button"
+              aria-label="Close Newsletter Signup Form"
+            >
+              <img
+                src="assets/icons/icon-close.svg"
+                alt="Close"
+                width="25"
+                height="25"
+              >
+            </button>
+            <h2>Stay Connected!</h2>
+            <p class="modal-description">
+              Sign up for our newsletter to get the latest news, tour dates,
+              exclusive content, and more!
+            </p>
+            <form id="newsletter-signup-form">
+              <div class="form-group">
+                <label for="newsletter-email">Email Address:</label>
+                <input
+                  type="email"
+                  id="newsletter-email"
+                  name="email"
+                  aria-describedby="newsletter-email-hint"
+                  required
+                >
+                <div id="newsletter-email-hint" class="form-hint">
+                  Enter your email address to subscribe.
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="checkbox"
+                  id="newsletter-opt-in"
+                  name="opt-in"
+                  value="yes"
+                >
+                <label for="newsletter-opt-in">
+                  I agree to receive email updates from High Bridge.
+                  </label>
+              </div>
+              <div class="modal-bottom">
+                <button type="submit" class="button primary">SUBSCRIBE!</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
       <a class="link" href="#">BACK TO TOP</a>
       <div class="socials">
         <a href="https://youtube.com">
-          <img src="assets/icons/icon-youtube.svg" />
+          <img
+            width="30"
+            height="30"
+            src="assets/icons/icon-youtube.svg"
+            alt="YouTube"
+          >
         </a>
 
         <a href="https://x.com">
-          <img src="assets/icons/icon-x.svg" />
+          <img width="30" height="30" src="assets/icons/icon-x.svg" alt="X">
         </a>
         <a href="https://instagram.com">
-          <img src="assets/icons/icon-instagram.svg" />
+          <img
+            width="30"
+            height="30"
+            src="assets/icons/icon-instagram.svg"
+            alt="Instagram"
+          >
         </a>
 
         <a href="https://apple.music.com">
-          <img src="assets/icons/icon-apple-music.svg" />
+          <img
+            width="30"
+            height="30"
+            src="assets/icons/icon-apple-music.svg"
+            alt="Apple Music"
+          >
         </a>
       </div>
     </footer>
@@ -110,6 +262,12 @@
 <a target="_blank" href="https://icons8.com/icon/RhYNENh5cxlS/instagram">Instagram</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 <a target="_blank" href="https://icons8.com/icon/37326/youtube">YouTube</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 <a target="_blank" href="https://icons8.com/icon/phOKFKYpe00C/x">X</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/71200/close">Close</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/39789/chevron-left">Chevron Left</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/39790/chevron-right">Chevron Right</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a href="https://www.vecteezy.com/free-photos/led-light-background">Led Light Background Stock photos by Vecteezy</a>
+<a href="https://www.freepik.com/free-psd/black-brush-stroke_360852663.htm#fromView=keyword&page=1&position=5&uuid=b2da3188-0799-4bf3-adb5-e20e0cd17724&query=Brush+Stroke">Image by freepik</a>
+
 
 Texture Image
 https://unsplash.com/photos/black-textile-on-black-background-UAbg0py6GYQ
@@ -118,5 +276,5 @@ https://unsplash.com/license
 
 
 
-<a href="https://www.freepik.com/free-psd/black-brush-stroke_360852663.htm#fromView=keyword&page=1&position=5&uuid=b2da3188-0799-4bf3-adb5-e20e0cd17724&query=Brush+Stroke">Image by freepik</a>
+
 -->
