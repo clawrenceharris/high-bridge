@@ -7,8 +7,7 @@
 }
 
 #anniversary .section-content {
-  height: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 #newsletter h2 {
@@ -1002,6 +1001,7 @@ button.primary:hover {
 }
 
 h2 {
+  margin-bottom: 10px;
   font-size: clamp(2.5rem, 13vw, 5rem);
   font-family: "blockhead-unplugged", "Barriecito", sans-serif;
 }
