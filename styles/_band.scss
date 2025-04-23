@@ -80,6 +80,8 @@
   left: 0;
   object-fit: cover;
   min-height: 100%;
+  overflow: visible;
+
 }
 
 @media only screen and (min-width: 720px) {
@@ -114,7 +116,6 @@
     height: 120%;
     object-fit: cover;
     flex: 1;
-    overflow: visible;
   }
   #band section {
     height: 80vh;

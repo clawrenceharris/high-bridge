@@ -829,6 +829,7 @@ button:hover img {
   -o-object-fit: cover;
      object-fit: cover;
   min-height: 100%;
+  overflow: visible;
 }
 
 @media only screen and (min-width: 720px) {
@@ -864,7 +865,6 @@ button:hover img {
     -o-object-fit: cover;
        object-fit: cover;
     flex: 1;
-    overflow: visible;
   }
   #band section {
     height: 80vh;
