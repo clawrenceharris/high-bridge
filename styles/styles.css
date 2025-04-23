@@ -846,10 +846,10 @@ button:hover img {
     left: 0;
   }
   #band section:nth-child(odd) .section-right {
-    left: -50%;
+    left: -20%;
   }
   #band section:nth-child(even) .section-right {
-    right: -50%;
+    right: -20%;
   }
   #band .section-right {
     height: 120%;
