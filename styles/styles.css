@@ -545,7 +545,7 @@ button:hover img {
 }
 
 #tour header {
-  min-height: auto;
+  height: auto;
 }
 
 #tour > img {
@@ -730,7 +730,7 @@ button:hover img {
 }
 
 #band header {
-  min-height: auto;
+  height: auto;
 }
 
 #band section {
@@ -739,17 +739,19 @@ button:hover img {
   overflow: hidden;
   display: flex;
   align-items: center;
+  right: 0;
   justify-content: center;
 }
 
 #band .section-left {
   display: flex;
-  max-width: 450px;
+  max-width: 550px;
   align-items: center;
   flex-direction: column;
   border: 2px solid black;
   padding: 10px 20px;
   position: absolute;
+  right: 0;
   margin: 20px;
   top: 20px;
 }
@@ -769,11 +771,6 @@ button:hover img {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#band section .socials img {
-  width: 20px;
-  height: 20px;
 }
 
 #band section .socials img {
@@ -846,13 +843,13 @@ button:hover img {
     right: 30px;
   }
   #band section:nth-child(even) .section-left {
-    left: 30px;
+    left: 0;
   }
   #band section:nth-child(odd) .section-right {
-    left: -100px;
+    left: -50%;
   }
   #band section:nth-child(even) .section-right {
-    right: 0;
+    right: -50%;
   }
   #band .section-right {
     height: 120%;
@@ -906,7 +903,7 @@ header img {
 header {
   transition: 0.3s;
   color: white;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -952,11 +949,6 @@ section {
 
 main {
   min-height: 100dvh;
-}
-
-header h1 {
-  line-height: 120%;
-  z-index: 99;
 }
 
 .link:hover {
