@@ -75,7 +75,7 @@ header .header-top {
   background-color: black;
 }
 .section-content {
-  padding: 20px;
+  padding: 30px;
   height: 100%;
   width: 100%;
   max-width: 750px;
@@ -88,9 +88,6 @@ header .header-top {
   justify-content: center;
 }
 
-section h2 {
-  padding: 30px;
-}
 section{
   overflow: hidden;
 }
@@ -153,7 +150,7 @@ button.primary:hover {
 }
 
 h2 {
-  font-size: clamp(3rem, 9vw, 4rem);
+  font-size: clamp(2.5rem, 13vw, 5rem);
   font-family: "blockhead-unplugged", "Barriecito", sans-serif;
 }
 

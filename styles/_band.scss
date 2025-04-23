@@ -18,10 +18,17 @@
   border: 2px solid black;
   padding: 10px 20px;
   position: absolute;
-  right: 0;
+  
+  margin: 20px;
   top: 20px;
 }
 
+#band .section-right {
+  position: absolute;
+  height: 100%;
+  overflow: visible;
+  bottom: -40%;
+}
 #band section .socials a {
   width: 20px;
   height: 20px;
@@ -43,22 +50,12 @@
 #band section .socials {
   gap: 8px;
 }
-#band h2 {
-  line-height: 0;
-}
 #band p {
   margin: 10px;
 }
 #band section p {
   text-align: left;
 }
-#band .section-right {
-  position: absolute;
-  height: 100%;
-  overflow: visible;
-  bottom: -40%;
-}
-
 #band section:nth-child(4) {
   background-color: var(--secondary-color);
 }

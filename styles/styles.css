@@ -42,7 +42,6 @@
 }
 
 #anniversary h2 {
-  font-size: 3.4rem;
   font-family: "blockhead-unplugged", "Barriecito", sans-serif;
 }
 
@@ -161,7 +160,6 @@ header .socials img:hover {
   z-index: 9;
   font-family: "synthemesc", Impact, sans-serif;
   z-index: 9;
-  font-size: clamp(2.5rem, 13vw, 5rem);
   color: rgb(81, 253, 216);
   opacity: 1;
 }
@@ -354,9 +352,6 @@ button:hover img {
   }
   #home header .socials {
     flex-direction: column;
-  }
-  #beach h2 {
-    font-size: 6rem;
   }
   #home header {
     min-height: 100vh;
@@ -755,8 +750,15 @@ button:hover img {
   border: 2px solid black;
   padding: 10px 20px;
   position: absolute;
-  right: 0;
+  margin: 20px;
   top: 20px;
+}
+
+#band .section-right {
+  position: absolute;
+  height: 100%;
+  overflow: visible;
+  bottom: -40%;
 }
 
 #band section .socials a {
@@ -782,23 +784,12 @@ button:hover img {
   gap: 8px;
 }
 
-#band h2 {
-  line-height: 0;
-}
-
 #band p {
   margin: 10px;
 }
 
 #band section p {
   text-align: left;
-}
-
-#band .section-right {
-  position: absolute;
-  height: 100%;
-  overflow: visible;
-  bottom: -40%;
 }
 
 #band section:nth-child(4) {
@@ -943,7 +934,7 @@ header .header-top {
 }
 
 .section-content {
-  padding: 20px;
+  padding: 30px;
   height: 100%;
   width: 100%;
   max-width: 750px;
@@ -953,10 +944,6 @@ header .header-top {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-section h2 {
-  padding: 30px;
 }
 
 section {
@@ -1023,7 +1010,7 @@ button.primary:hover {
 }
 
 h2 {
-  font-size: clamp(3rem, 9vw, 4rem);
+  font-size: clamp(2.5rem, 13vw, 5rem);
   font-family: "blockhead-unplugged", "Barriecito", sans-serif;
 }
 

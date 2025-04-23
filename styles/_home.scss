@@ -39,9 +39,8 @@
 
   height: 60vh;
 }
-
 #anniversary h2 {
-  font-size: 3.4rem;
+
   font-family: "blockhead-unplugged", "Barriecito", sans-serif;
 }
 header .socials img:hover {
@@ -155,7 +154,6 @@ header .socials img:hover {
   z-index: 9;
   font-family: "synthemesc", Impact, sans-serif;
   z-index: 9;
-  font-size: clamp(2.5rem, 13vw, 5rem);
   color: rgb(81, 253, 216);
   opacity: 1;
 }
@@ -349,9 +347,6 @@ button:hover img {
 
   #home header .socials {
     flex-direction: column;
-  }
-  #beach h2 {
-    font-size: 6rem;
   }
   #home header {
     min-height: 100vh;
