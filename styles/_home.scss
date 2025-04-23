@@ -2,8 +2,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   max-height: 60vh;
-}
 
+}
 #anniversary .section-content {
 
   justify-content: space-evenly;
@@ -49,16 +49,13 @@ header .socials img:hover {
   opacity: 0.7;
 }
 #home h1 {
+  z-index: 9;
   text-align: center;
   background: linear-gradient(to bottom, rgb(86, 255, 162), rgb(255, 209, 41));
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-
-  top: 0;
   font-size: clamp(4rem, 15vw, 10rem);
-  width: 100%;
-  left: 20px;
   font-family: "blockhead-black-face", "Barriecito", sans-serif;
   font-weight: bold;
 }

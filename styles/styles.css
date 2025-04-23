@@ -53,15 +53,13 @@ header .socials img:hover {
 }
 
 #home h1 {
+  z-index: 9;
   text-align: center;
   background: linear-gradient(to bottom, rgb(86, 255, 162), rgb(255, 209, 41));
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  top: 0;
   font-size: clamp(4rem, 15vw, 10rem);
-  width: 100%;
-  left: 20px;
   font-family: "blockhead-black-face", "Barriecito", sans-serif;
   font-weight: bold;
 }
@@ -900,9 +898,9 @@ header img {
 }
 
 header {
-  transition: 0.3s;
   color: white;
   height: 100vh;
+  transition: 0.2s;
   display: flex;
   flex-direction: column;
   overflow: hidden;
