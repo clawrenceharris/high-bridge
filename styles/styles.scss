@@ -58,7 +58,7 @@ header {
 header .header-top a {
   font-size: 2rem;
   color: white;
-  font-family: "blockhead-plain";
+  font-family: "blockhead-plain", "Barriecito", sans-serif;
 }
 
 header .header-top {
@@ -131,7 +131,7 @@ button,
   max-width: 150px;
   background: none;
   color: black;
-  font-family: "Roboto";
+  font-family: "Roboto", 'Courier New', Courier, monospace;
   font-weight: 300;
   border: none;
   padding: 15px;
@@ -154,21 +154,20 @@ button.primary:hover {
 
 h2 {
   font-size: clamp(3rem, 9vw, 4rem);
-  font-family: "blockhead-unplugged";
+  font-family: "blockhead-unplugged", "Barriecito", sans-serif;
 }
 
 h1 {
   font-weight: 900;
-  font-family: "blockhead";
+  font-family: "blockhead", "Barriecito", sans-serif;
   font-size: clamp(5rem, 20vw, 10rem);
 }
 
 h3 {
   letter-spacing: 3px;
   font-size: 2.5rem;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-weight: 500;
+  font-family: "Roboto", 'Courier New', Courier, monospace;
+  font-weight: 600;
 }
 
 p {
@@ -185,19 +184,19 @@ a {
   font-weight: 600;
   letter-spacing: 2px;
   text-decoration: none;
-  font-family: "Roboto";
+  font-family: "Roboto", 'Courier New', Courier, monospace;
   letter-spacing: 2px;
 }
 .link {
   color: black;
-  font-family: "Roboto";
+  font-family: "Roboto", 'Courier New', Courier, monospace;
   border: 0 solid black;
   transition: 0.1s ease;
 }
 
 nav {
   font-size: clamp(1rem, 4vw, 2rem);
-  font-family: "Tilt Warp";
+  font-family: "Tilt Warp", Verdana, Geneva, Tahoma, sans-serif;
   position: sticky;
   margin-top: 60px;
   top: 0;
@@ -221,7 +220,7 @@ nav li {
 }
 
 nav a {
-  font-family: "Roboto";
+  font-family: "Roboto", 'Courier New', Courier, monospace;
   width: 100%;
   font-weight: 300;
   display: flex;

@@ -9,7 +9,7 @@
 #music header h1 {
   margin: 0;
   padding: 0;
-  font-family: "Whisper";
+  font-family: "Whisper", serif;
   font-size: clamp(3rem, 13vw, 8rem);
 }
 #music header::after {
@@ -47,7 +47,7 @@
   filter: invert(1);
 }
 #video-release h2 {
-  font-family: "felt-tip-senior", sans-serif;
+  font-family: "felt-tip-senior", Arial, Helvetica, sans-serif;
   font-size: clamp(3rem, 12vw, 7rem);
   font-weight: 300;
 }
