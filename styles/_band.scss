@@ -1,10 +1,9 @@
 #band header {
-  height: auto;
+  min-height: auto;
 }
 #band section {
   width: 100%;
-  background-color: white;
-  height: 85vh;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -13,16 +12,16 @@
 
 #band .section-left {
   display: flex;
+  max-width: 450px;
   align-items: center;
   flex-direction: column;
   border: 2px solid black;
   padding: 10px 20px;
+  position: absolute;
+  right: 0;
+  top: 20px;
 }
 
-#band .section-content {
-  justify-content: start;
-  max-width: 800px;
-}
 #band section .socials a {
   width: 20px;
   height: 20px;
@@ -36,6 +35,7 @@
   width: 20px;
   height: 20px;
 }
+
 #band section .socials img {
   filter: invert(0);
 }
@@ -53,38 +53,37 @@
   text-align: left;
 }
 #band .section-right {
-  flex: 1;
-  height: 65%;
   position: absolute;
-  bottom: 0;
-  width: auto;
+  height: 100%;
   overflow: visible;
+  bottom: -40%;
 }
 
 #band section:nth-child(4) {
-  background-color: rgb(255, 215, 215);
+  background-color: var(--secondary-color);
 }
-
+#band section:nth-child(3) {
+  background-color: white;
+}
 #band section:nth-child(3) .section-left {
   border: none;
-  background-color: rgba(169, 246, 255, 0.4);
+  background-color: var(--primary-color);
 }
 
 #band section:nth-child(1) .section-left {
   border: none;
-  background-color: rgb(255, 215, 215);
+  background-color: var(--secondary-color);
 }
 #band section:nth-child(1) {
   background-color: white;
 }
 #band section:nth-child(2) {
-  background-color: bisque;
+  background-color: var(--tertiary-color);
 }
 
 #band .section-right img {
   width: 100%;
   left: 0;
-
   object-fit: cover;
   min-height: 100%;
 }
@@ -101,14 +100,9 @@
   }
   #band .section-right img {
     width: 500px;
-    overflow: visible;
 
     object-fit: cover;
     max-height: 90%;
-  }
-  #band .section-left {
-    position: absolute;
-    top: 30px;
   }
   #band section:nth-child(odd) .section-left {
     right: 30px;
@@ -123,9 +117,10 @@
     right: 0;
   }
   #band .section-right {
-    height: 100%;
-    position: absolute;
-    width: 50%;
+    height: 120%;
+    object-fit: cover;
+    flex: 1;
+    overflow: visible;
   }
   #band section {
     height: 80vh;

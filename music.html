@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
     <meta
       name="description"
-      content="This is the website for the band High Bridge"
-    />
-    <meta name="author" content="Caleb Harris" />
-    <link rel="stylesheet" href="styles/styles.css" />
+      content="The official website of High Bridge, blending emotional pop energy with hard-hitting rock intensity. Get the latest music, tour dates, news, videos, and exclusive content from the band. Sign up for our newsletter!"
+    >
+    <meta name="author" content="Caleb Harris" >
+    <link rel="stylesheet" href="styles/styles.css">
     <script defer src="scripts/swiper.js"></script>
     <script defer src="scripts/parallax.js"></script>
 
@@ -28,7 +28,7 @@
           <li><a href="band.html">Band</a></li>
         </ul>
       </nav>
-      <div class="header-content">
+      <div class="header-box">
         <div>
           <h1>Burning Bridges</h1>
           <p>
@@ -36,129 +36,139 @@
             tracks "Forever Gone", "Ashes Remain" and "Rise".
           </p>
         </div>
-        <button class="link">CHECK IT OUT</button>
+        <button class="secondary">CHECK IT OUT</button>
       </div>
-      <img class="parallax-image" src="assets/images/band3.jpeg" />
-
-      <div class="overlay"></div>
+      <img
+        class="parallax-image"
+        width="900"
+        height="642"
+        src="assets/images/band3.jpg"
+        alt="A black and white photograph captures two band members on stage, each playing a guitar. The member on the left has long hair and is bending over his instrument, while the member on the right has a shorter haircut and is standing more upright. Bright beams of light shine from behind them, creating a dramatic effect and silhouetting their figures."
+      >
     </header>
     <main>
-      <section id="listen" class="swiper-wrapper">
-        <h2>Listen</h2>
-        <div class="control-button left-arrow">
-          <svg
-            class="w-6 h-6 text-gray-800 dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="m14 8-4 4 4 4"
-            />
-          </svg>
-        </div>
-        <div class="swiper-container">
-          <div class="play-button control-button">
-            <svg
-              class="w-6 h-6 text-gray-800 dark:text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 24 24"
+      <section id="listen">
+        <div class="swiper-wrapper section-content">
+          <h2>Listen</h2>
+          <button class="control-button left-arrow primary">
+            <img
+              src="assets/icons/chevron-left.png"
+              width="30"
+              height="30"
+              alt="Chevron left"
             >
-              <path
-                fill-rule="evenodd"
-                d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <div class="swiper-slide album-item">
-            <img src="assets/images/album-cover5.jpg" alt="" />
-          </div>
-          <div class="swiper-slide album-item">
-            <img src="assets/images/album-cover4.jpg" alt="" />
-          </div>
+          </button>
+          <div class="swiper-container">
+            <div role="button" class="play-button control-button">
+              <svg
+                class="w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="swiper-slide album-item">
+              <img
+                width="800"
+                height="800"
+                src="assets/images/album-cover5.jpg"
+                alt='Album art featuring a burnt, heart-shaped hole in a light grey surface. The edges of the heart are charred and brown, revealing a dark, empty center. To the right, the words "burning bridges" are handwritten in red. In the bottom corner, a "Parental Advisory: Extreme Madness" label is visible'
+              >
+            </div>
+            <div class="swiper-slide album-item">
+              <img
+                width="800"
+                height="800"
+                src="assets/images/album-cover4.jpg"
+                alt='Album art for  "Fallen" featuring a photograph of a dilapidated stone building with weathered roofs, set in a grassy field under a cloudy sky. The image is framed by a thin gold border on a dark olive green background. The word "FALLEN" is written in a large, gold, serif font at the top.'
+              >
+            </div>
 
-          <div class="swiper-slide album-item">
-            <img src="assets/images/album-cover3.jpg" alt="" />
-          </div>
+            <div class="swiper-slide album-item">
+              <img
+                width="800"
+                height="800"
+                src="assets/images/album-cover3.jpg"
+                alt='Album art for "stick figures" featuring two simple black stick figures with circular heads and dot eyes standing on either side of a red heart on a white background,. The words "stick" and "figures" are written in colorful, lowercase, slightly uneven lettering above the figures.'
+              >
+            </div>
 
-          <div class="swiper-slide album-item">
-            <img src="assets/images/album-cover2.jpg" alt="" />
+            <div class="swiper-slide album-item">
+              <img
+                width="800"
+                height="800"
+                src="assets/images/album-cover2.jpg"
+                alt='Album art for "Lunar Muse" featuring a close-up, stylized image of a woman&apos;s nose and bright red lips, overlaid with colorful graffiti-style markings. The background is a solid red. In the top left corner, there&apos;s a black and white "Parental Advisory: Extreme Madness" label. The words "LUNAR MUSE" are written in large, light blue, slightly blurred sans-serif letters in the upper right corner.'
+              >
+            </div>
           </div>
-        </div>
-        <div class="control-button right-arrow">
-          <svg
-            class="w-6 h-6 text-gray-800 dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="m10 16 4-4-4-4"
-            />
-          </svg>
+          <button class="control-button right-arrow primary">
+            <img
+              src="assets/icons/chevron-right.png"
+              width="30"
+              height="30"
+              alt="Chevron right"
+            >
+          </button>
         </div>
       </section>
-
       <section id="video-release">
         <div class="section-content">
           <p>New music video is avaialable to stream!</p>
 
           <h2>"Miles From Home"</h2>
-          <button>WATCH VIDEO</button>
+          <button class="primary">WATCH VIDEO</button>
         </div>
-        <img src="assets/images/band2.jpeg" />
+        <img
+          width="970"
+          height="647"
+          alt="Two band members are shown outdoors on a sunny day. In the foreground, a man with short brown hair, a beard, and sunglasses plays a light-colored bass guitar, looking off to his right with a smile. Behind him and slightly to the left, another man with longer dark hair plays an electric guitar, also smiling and looking in the same direction. The background shows a clear blue sky, some trees, and possibly other band equipment."
+          src="assets/images/band2.png"
+        >
       </section>
     </main>
     <footer>
       <a class="link" href="#">BACK TO TOP</a>
       <div class="socials">
         <a href="https://youtube.com">
-          <img src="assets/icons/icon-youtube.svg" />
+          <img
+            width="30"
+            height="30"
+            src="assets/icons/icon-youtube.svg"
+            alt="YouTube"
+          >
         </a>
 
         <a href="https://x.com">
-          <img src="assets/icons/icon-x.svg" />
+          <img width="30" height="30" src="assets/icons/icon-x.svg" alt="X">
         </a>
         <a href="https://instagram.com">
-          <img src="assets/icons/icon-instagram.svg" />
+          <img
+            width="30"
+            height="30"
+            src="assets/icons/icon-instagram.svg"
+            alt="Instagram"
+          >
         </a>
 
         <a href="https://apple.music.com">
-          <img src="assets/icons/icon-apple-music.svg" />
+          <img
+            width="30"
+            height="30"
+            src="assets/icons/icon-apple-music.svg"
+            alt="Apple Music"
+          >
         </a>
       </div>
     </footer>
   </body>
 </html>
-
-<!--
-Handmaid Hero Image
-
-https://clipart-library.com/clipart/handmaids-tale-clipart_52.html 
-Lisence: Personal Use
-
-
-Handmaid's Tale Book Cover
-https://www.flickr.com/photos/lin84/41393214385
-By Lindsay Silveira
-https://creativecommons.org/licenses/by-nd/2.0/
--->
